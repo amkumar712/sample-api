@@ -15,4 +15,8 @@ public class SampleController {
         }
         return "Welcome " + name;
     }
+
+    private void test() {
+        System.out.println("This is Test");
+    }
 }
