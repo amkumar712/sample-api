@@ -2,20 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+
+        stage('AWS Version') {
             steps {
-                echo 'Building..'
+                sh '''
+                aws --version
+                '''
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+
     }
 }
